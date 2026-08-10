@@ -1,0 +1,23 @@
+{
+  "assets": {
+    "pure": {
+      "path": "external_assets/PURE"
+    },
+    "grosser": {
+      "path": "external_assets/grosser"
+    },
+    "promise_exp": {
+      "path": "external_assets/PROMISE_exp"
+    },
+    "asset": {
+      "path": "external_assets/ASSET"
+    },
+    "onestopenglish": {
+      "path": "external_assets/OneStopEnglish"
+    },
+    "wi_locness": {
+      "path": "external_assets/wi_locness_v2.1.bea19.tar.gz"
+    }
+  }
+}
+

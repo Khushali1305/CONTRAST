@@ -1,0 +1,12 @@
+{
+  "analysis_family": "directional",
+  "operation": "modal_substitution",
+  "direction": "weaken",
+  "original_modal": "shall",
+  "new_modal": "may",
+  "base_source": "The service shall retain the record.",
+  "probe_source": "The service may retain the record.",
+  "base_rewrite": "The service shall retain the record.",
+  "probe_rewrite": "The service may retain the record."
+}
+
