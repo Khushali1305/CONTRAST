@@ -1,0 +1,11 @@
+rule_id,section,decision,rationale,status
+G-01,General,Eligibility uses source metadata/text only.,Prevents output-dependent denominator selection.,FROZEN
+G-02,Missingness,Technical cache gaps are excluded and reported; present unparsable outputs fail.,Separates pipeline loss from model behavior.,FROZEN
+M-01,Modal extraction,Use first explicit modal and the three-class scale.,Matches the stated scale and fixes the focal locus before scoring.,FROZEN
+I-01,Invariance,Primary focal pass requires both output first-modal classes to equal the base source class.,Tests stability without rewarding common collapse to a wrong class.,FROZEN
+D-01,Directional,Equality fails; exact pass matches both source endpoint classes.,Removes the former non-strict equality pass.,FROZEN
+A-01,Addition,Score incremental 70% uptake descriptively; do not call it correctness.,The source addition is not independently established as harmful.,FROZEN
+C-01,Collateral,"Primary proxy is F1>=0.80, anchor recall>=0.50, and exact number/negation consistency.",Operationalizes 'and only that change' transparently.,FROZEN
+E-01,Endpoint,Primary endpoint pass requires EARS-Struct-v1=1.0 for both rewrites.,Conditions hidden-failure analysis on full structural-form score.,FROZEN
+A-02,Aggregation,"Average within item, then across items; bootstrap items stratified by dataset.",Prevents items with more invariance probes from receiving more weight.,FROZEN
+C-02,Claims,"No global reliability, balanced tier, harmful copying, or causal norm-shift claim.",These interpretations are not supported by the corrected constructs.,FROZEN

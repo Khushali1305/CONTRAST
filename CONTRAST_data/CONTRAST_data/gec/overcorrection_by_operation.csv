@@ -1,0 +1,25 @@
+model_id,model_display_name,operation,probe_count,overcorrection_resistance
+flan_t5_large,FLAN-T5-Large,insert_topicalize_cue,248,0.8346774194
+flan_t5_large,FLAN-T5-Large,insert_discourse_cue,182,0.4450549451
+flan_t5_large,FLAN-T5-Large,insert_register_cue,56,0.6428571429
+flan_t5_xl,FLAN-T5-XL,insert_topicalize_cue,248,0.9717741935
+flan_t5_xl,FLAN-T5-XL,insert_discourse_cue,182,0.9725274725
+flan_t5_xl,FLAN-T5-XL,insert_register_cue,56,0.875
+llama_8b,Llama-3.1-8B,insert_topicalize_cue,248,0.6774193548
+llama_8b,Llama-3.1-8B,insert_discourse_cue,182,0.5164835165
+llama_8b,Llama-3.1-8B,insert_register_cue,56,0.6607142857
+llama_70b,Llama-3.1-70B,insert_topicalize_cue,248,0.6693548387
+llama_70b,Llama-3.1-70B,insert_discourse_cue,182,0.3241758242
+llama_70b,Llama-3.1-70B,insert_register_cue,56,0.4107142857
+qwen_32b,Qwen2.5-32B,insert_topicalize_cue,248,0.7782258065
+qwen_32b,Qwen2.5-32B,insert_discourse_cue,182,0.5274725275
+qwen_32b,Qwen2.5-32B,insert_register_cue,56,0.7142857143
+gemma_27b,Gemma-3-27B,insert_topicalize_cue,248,0.814516129
+gemma_27b,Gemma-3-27B,insert_discourse_cue,182,0.3571428571
+gemma_27b,Gemma-3-27B,insert_register_cue,56,0.5892857143
+gpt4,GPT-4.1,insert_topicalize_cue,248,0.814516129
+gpt4,GPT-4.1,insert_discourse_cue,182,0.3681318681
+gpt4,GPT-4.1,insert_register_cue,56,0.7857142857
+identity_baseline,Identity / no-edit baseline,insert_topicalize_cue,248,1
+identity_baseline,Identity / no-edit baseline,insert_discourse_cue,182,1
+identity_baseline,Identity / no-edit baseline,insert_register_cue,56,1

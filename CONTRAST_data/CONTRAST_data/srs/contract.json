@@ -1,0 +1,250 @@
+{
+  "aggregation.also_report": [
+    "pair-micro mean",
+    "equal-weight macro mean across source datasets",
+    "eligible source-pair count",
+    "technically available pair count",
+    "unique canonical item count",
+    "per-dataset and per-operation results"
+  ],
+  "aggregation.confidence_interval.interval": "95% percentile",
+  "aggregation.confidence_interval.method": "Nonparametric percentile bootstrap over canonical items, stratified by source_dataset",
+  "aggregation.confidence_interval.replicates": 10000,
+  "aggregation.confidence_interval.seed": 20260731,
+  "aggregation.primary_point_estimate": "Within each model and family, average eligible available probe scores within canonical item, then average item means. Each canonical item receives equal weight.",
+  "aggregation.ranking_policy": "No global reliability composite, winner tier, or cross-model significance ranking. Display prompt_group because FLAN-T5 systems did not receive the full system prompt. Report the rule baseline separately as calibration.",
+  "analysis_unit": "One canonical base input and one canonical probe input rewritten by the same system.",
+  "canonical_inputs.inputs_csv.path": "outputs/contrast_srs_canonical/data/inputs.csv",
+  "canonical_inputs.inputs_csv.sha256": "687c6c17995d61c15de64861f41835ad4d68a444b804db8875661e0d67815fce",
+  "canonical_inputs.items_csv.path": "outputs/contrast_srs_canonical/data/items.csv",
+  "canonical_inputs.items_csv.sha256": "0ea3508fd561892237ec948aa5c9760576fea3940e0b32d146596670de11f5bc",
+  "canonical_inputs.outputs_csv.path": "outputs/contrast_srs_canonical/data/outputs.csv",
+  "canonical_inputs.outputs_csv.sha256": "4966a1769e9a5ba16fd7bc39337142e11110dea23850138661a7b6738e415583",
+  "change_control": "Any alteration to eligibility, extraction, thresholds, aggregation, or missing-data treatment requires a new contract version. Human validation may validate this version but may not silently alter it.",
+  "collateral_proxy.content_f1": "Set F1 between the two rewrites' non-focal content-token sets. Empty on either side yields 0.",
+  "collateral_proxy.content_token_set": "Normalized unique tokens after removing modal tokens, frozen stopwords, one-character tokens, and—only for addition probes—the distractor's content tokens.",
+  "collateral_proxy.label_requirement": "Always call this an automatic collateral-preservation proxy until validated against item-level human judgments.",
+  "collateral_proxy.negation_consistency": "Both rewrites contain every negation token shared by the two sources, and the two rewrite negation-token sets are identical.",
+  "collateral_proxy.number_consistency": "Both rewrites contain every number shared by the two sources, and the two rewrite number sets are identical.",
+  "collateral_proxy.primary_pass": "content_f1 >= 0.80 AND shared_anchor_recall >= 0.50 AND number_consistency=1 AND negation_consistency=1",
+  "collateral_proxy.sensitivity.lenient": "content_f1 >= 0.70 AND shared_anchor_recall >= 0.40 with the same exact number and negation constraints",
+  "collateral_proxy.sensitivity.strict": "content_f1 >= 0.90 AND shared_anchor_recall >= 0.60 with the same exact number and negation constraints",
+  "collateral_proxy.shared_anchor_recall": "For each rewrite, recall of the intersection of the base and probe sources' content-token sets; take the lower endpoint recall. If the source intersection is empty, define recall as 1.",
+  "complete_response_metrics.addition_profile": "addition_uptake_70 AND addition-specific collateral_primary_pass",
+  "complete_response_metrics.primary_directional": "direction_exact_pass AND collateral_primary_pass",
+  "complete_response_metrics.primary_invariance": "invariance_exact_pass AND collateral_primary_pass",
+  "complete_response_metrics.relation_only_diagnostic": "family relation pass AND collateral_primary_pass",
+  "construct": "Whether a controlled source change produces the norm-required focal response while preserving non-focal content in the complete rewrite.",
+  "contract_id": "CONTRAST-SRS-CR-v1.0.0",
+  "focal_metrics.addition_exact_phrase": "The normalized distractor occurs in the probe rewrite and not in the base rewrite.",
+  "focal_metrics.addition_uptake_70": "Distractor content-token coverage in the probe rewrite is at least 0.70 and strictly greater than coverage in the base rewrite.",
+  "focal_metrics.direction_exact_pass": "The base rewrite's first modal class equals original_modal's class and the probe rewrite's first modal class equals new_modal's class.",
+  "focal_metrics.direction_relation_pass": "Both present rewrites have extracted first modal classes and their strict ordering matches weaken or strengthen. Equality fails.",
+  "focal_metrics.invariance_exact_pass": "Both present rewrites' first modal classes equal the base source's first modal class.",
+  "focal_metrics.invariance_relation_pass": "Both present rewrites have an extracted first modal class and the two classes are equal.",
+  "frozen_date": "2026-07-31",
+  "hidden_failure.eligible_denominator": "Source-eligible, technically available pairs for which both endpoint rewrites pass EARS-Struct-v1 at the stated threshold.",
+  "hidden_failure.families": [
+    "invariance",
+    "directional"
+  ],
+  "hidden_failure.hidden_complete_failure": "1 minus the family primary complete-response pass.",
+  "hidden_failure.hidden_focal_failure": "1 minus the family exact focal pass.",
+  "modal_scale.1": [
+    "may",
+    "can"
+  ],
+  "modal_scale.2": [
+    "should",
+    "will"
+  ],
+  "modal_scale.3": [
+    "shall",
+    "must"
+  ],
+  "modal_scale.missing_extraction": "A present nonempty rewrite with no explicit modal receives focal score 0; it is not removed from the denominator.",
+  "modal_scale.primary_extractor": "First explicit occurrence among shall, must, should, will, may, can in complete-text order.",
+  "modal_scale.sensitivity_extractors": [
+    "highest explicit modal class",
+    "unique modal class, undefined when multiple classes occur"
+  ],
+  "models": [
+    {
+      "display_name": "FLAN-T5-Large",
+      "model_id": "flan_t5_large",
+      "prompt_group": "short_user_only",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "FLAN-T5-XL",
+      "model_id": "flan_t5_xl",
+      "prompt_group": "short_user_only",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "Llama-3.1-8B",
+      "model_id": "llama_8b",
+      "prompt_group": "full_system_plus_user",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "Llama-3.1-70B",
+      "model_id": "llama_70b",
+      "prompt_group": "full_system_plus_user",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "Qwen2.5-32B",
+      "model_id": "qwen_32b",
+      "prompt_group": "full_system_plus_user",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "Gemma-3-27B",
+      "model_id": "gemma_27b",
+      "prompt_group": "full_system_plus_user",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "GPT-4.1",
+      "model_id": "gpt4",
+      "prompt_group": "full_system_plus_user",
+      "role": "evaluated_neural_system"
+    },
+    {
+      "display_name": "Rule Baseline",
+      "model_id": "rule_baseline",
+      "prompt_group": "deterministic_rule_baseline",
+      "role": "calibration_baseline"
+    }
+  ],
+  "normalization.case": "casefold",
+  "normalization.content_stopwords": [
+    "a",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "be",
+    "been",
+    "being",
+    "by",
+    "for",
+    "from",
+    "had",
+    "has",
+    "have",
+    "he",
+    "her",
+    "hers",
+    "him",
+    "his",
+    "i",
+    "in",
+    "into",
+    "is",
+    "it",
+    "its",
+    "of",
+    "on",
+    "or",
+    "our",
+    "ours",
+    "she",
+    "that",
+    "the",
+    "their",
+    "theirs",
+    "them",
+    "they",
+    "this",
+    "to",
+    "was",
+    "we",
+    "were",
+    "with",
+    "you",
+    "your",
+    "yours",
+    "system",
+    "when",
+    "if",
+    "while",
+    "where"
+  ],
+  "normalization.negation_tokens": [
+    "not",
+    "no",
+    "never"
+  ],
+  "normalization.number_regex": "\\b\\d+(?:[.,]\\d+)?%?\\b",
+  "normalization.token_regex": "[a-z0-9]+(?:[._/-][a-z0-9]+)*",
+  "normalization.unicode": "NFKC",
+  "ordinary_endpoint_comparator.interpretation": "Structural endpoint form only; never call this semantic correctness or full EARS validity.",
+  "ordinary_endpoint_comparator.name": "EARS-Struct-v1",
+  "ordinary_endpoint_comparator.primary_pass_threshold": 1.0,
+  "ordinary_endpoint_comparator.score": [
+    "0.4 if an explicit shall/should/must/may/will occurs",
+    "0.3 if 'the' plus one or two words precedes such a modal",
+    "0.2 if the trimmed rewrite ends in a period",
+    "0.1 if when/if/while/where occurs, otherwise 0.1 if the rewrite starts with 'the' plus a word"
+  ],
+  "ordinary_endpoint_comparator.sensitivity_pass_threshold": 0.8,
+  "out_of_scope": [
+    "Simplification scoring",
+    "GEC scoring",
+    "Cross-setting correlation",
+    "Human semantic adjudication"
+  ],
+  "prohibited_interpretations": [
+    "Do not call addition retention harmful copying.",
+    "Do not call addition removal shortcut resistance.",
+    "Do not average invariance, directional, and addition metrics into global reliability.",
+    "Do not retain the old balanced-tier claim.",
+    "Do not use the SRS-simplification comparison as a controlled norm-shift effect.",
+    "Do not call the collateral proxy validated semantic preservation without item-level human evidence.",
+    "Do not treat EARS-Struct-v1 as endpoint correctness."
+  ],
+  "scope": "Primary SRS paired-revision analysis only",
+  "source_eligibility.addition.expected_count": 891,
+  "source_eligibility.addition.include_if": [
+    "probe_family equals shortcut",
+    "operation equals distractor_insertion",
+    "distractor text has at least one content token",
+    "the normalized probe source contains the distractor",
+    "the normalized base source does not contain the distractor"
+  ],
+  "source_eligibility.addition.interpretation": "Descriptive addition uptake only. It is not correctness, shortcut resistance, or harmful-copying evidence.",
+  "source_eligibility.directional.excluded_categories.focal_modal_not_first": 20,
+  "source_eligibility.directional.excluded_categories.non_modal_scope_intervention": 23,
+  "source_eligibility.directional.excluded_categories.same_class_modal_substitution": 86,
+  "source_eligibility.directional.expected_count": 762,
+  "source_eligibility.directional.expected_relation": "The first modal class in the rewritten probe must move in the declared direction; exact focal response additionally requires both rewritten endpoints to match their source modal classes.",
+  "source_eligibility.directional.include_if": [
+    "probe_family equals directional",
+    "operation equals modal_substitution",
+    "direction is weaken or strengthen",
+    "original_modal and new_modal are both in the frozen scale",
+    "their classes differ and agree with the declared direction",
+    "the first explicit modal in the base source is original_modal",
+    "the first explicit modal in the probe source is new_modal"
+  ],
+  "source_eligibility.general": "Eligibility is determined only from frozen source/probe metadata and source text, never from a model output.",
+  "source_eligibility.invariance.expected_count": 1286,
+  "source_eligibility.invariance.expected_relation": "Both rewritten endpoints should express the base source's first modal class.",
+  "source_eligibility.invariance.include_if": [
+    "probe_family equals invariance",
+    "expected_relation equals stable",
+    "the base source contains at least one explicit modal from the frozen scale"
+  ],
+  "status": "frozen",
+  "technical_availability.known_missingness": "Qwen2.5-32B has one missing base output and its three probe outputs for one repaired duplicate-ID item; this creates three technically unavailable pairs.",
+  "technical_availability.missing_cache_record": "Technical missingness: exclude from metric denominators, report coverage, and never impute.",
+  "technical_availability.pair_available_if": [
+    "Both canonical output records have output_present=1.",
+    "Both run_status values equal ok.",
+    "Both rewrites are nonempty after trimming."
+  ],
+  "technical_availability.present_but_unparsable": "Scored failure for the affected focal component."
+}

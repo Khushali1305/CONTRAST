@@ -1,0 +1,7 @@
+analysis_family,source_eligible,eligibility_reason,source_probe_count,canonical_item_count
+addition,1,eligible,891,891
+directional,1,eligible,762,762
+directional,0,focal_modal_not_first,20,20
+directional,0,non_modal_scope_intervention,23,23
+directional,0,same_class_modal_substitution,86,86
+invariance,1,eligible,1286,879

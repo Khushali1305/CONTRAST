@@ -1,0 +1,124 @@
+{
+  "archive": "CONTRAST_data",
+  "contract_id": "CONTRAST-SRS-CR-v1.0.0",
+  "created": "2026-08-04",
+  "files": [
+    {
+      "bytes": 426,
+      "path": "LICENSE",
+      "sha256": "346ec31c60d978bb6f2a3d3f75baf893c6ca5ea20d0076f1dd99c1302bc58c6d"
+    },
+    {
+      "bytes": 2985,
+      "path": "README.md",
+      "sha256": "b9adec66d5d90ff7a3347e4971f0c5f59d6e62b383f11998250c1f08fb2434aa"
+    },
+    {
+      "bytes": 1766,
+      "path": "assets/DATA_STATEMENT.md",
+      "sha256": "f1d6a3fc13629e9724d8a7f48e705386e3f39652cdf687b5c11f561ab276ca6d"
+    },
+    {
+      "bytes": 2093,
+      "path": "assets/THIRD_PARTY_ASSETS.md",
+      "sha256": "59bc477ba3ee11c2f1baf77825a4b6193f3b307e00df92d15e6b03b64e79f369"
+    },
+    {
+      "bytes": 683,
+      "data_rows": 7,
+      "path": "gec/bounded_endpoint_overcorrection_summary.csv",
+      "sha256": "d3aca6f53c0b37cb7d2b95c07fcff73e99c8627816b8359e695af4ad3e0068d1"
+    },
+    {
+      "bytes": 1532,
+      "data_rows": 24,
+      "path": "gec/overcorrection_by_operation.csv",
+      "sha256": "9950a9e1dfb5fd25ce9f28890f03813071a10c450bfd8f31c5b0339139d38ed0"
+    },
+    {
+      "bytes": 865,
+      "data_rows": 7,
+      "path": "simplification/addition_response_summary.csv",
+      "sha256": "571fb174f8c6c6d66c405c35b05ab38d0a43c5423b586298cef4fd5e4f8b4f1f"
+    },
+    {
+      "bytes": 792,
+      "data_rows": 7,
+      "path": "simplification/shared_invariance_summary.csv",
+      "sha256": "378c299e5757c6c47fc4c4ae9758d7099e56a5592348f61e76843a6b1d2f5259"
+    },
+    {
+      "bytes": 12392,
+      "path": "srs/contract.json",
+      "sha256": "773ff0913d5c81296ae3645ac94d6fdbdefa91c95cd7be73cc8281971ca79441"
+    },
+    {
+      "bytes": 848,
+      "data_rows": 8,
+      "path": "srs/coverage.csv",
+      "sha256": "e09ffacaadb8b86be6d5c2f53faa9211f4559212f3cefebffdae76896aa239d2"
+    },
+    {
+      "bytes": 24266,
+      "data_rows": 192,
+      "path": "srs/dataset_operations.csv",
+      "sha256": "29136a4d63c5406b9eefdbc546a1e26550a8c54cecf5a295df0c1beff0b65130"
+    },
+    {
+      "bytes": 322,
+      "data_rows": 6,
+      "path": "srs/eligibility.csv",
+      "sha256": "85bcb87f16d7b4f323f1882e7d87455f0a45df54817f99021e2fd5627a871136"
+    },
+    {
+      "bytes": 3004,
+      "data_rows": 8,
+      "path": "srs/hidden_failures.csv",
+      "sha256": "47d960e439fdd7c3fb9bdbf7f86310fc7228c1db2be4f8681051433f1250f918"
+    },
+    {
+      "bytes": 1339,
+      "data_rows": 10,
+      "path": "srs/metrics.csv",
+      "sha256": "6f7ed49da1ce8021d1d09e546336cb0971096c74e9ff28a232f64b10770a9e1a"
+    },
+    {
+      "bytes": 6344019,
+      "data_rows": 24544,
+      "path": "srs/pair_scores.csv",
+      "sha256": "ed8e483d2675f272fa8b4c151268eeaf610fa96148a3260d4daf3c6f187738e2"
+    },
+    {
+      "bytes": 3797,
+      "data_rows": 8,
+      "path": "srs/primary_results.csv",
+      "sha256": "8ffea44ffd47fa7881c7c7ef7840d39cc1a444405ee8e52ddfd58c0903837345"
+    },
+    {
+      "bytes": 727,
+      "data_rows": 16,
+      "path": "srs/qa.csv",
+      "sha256": "fe88d13f68fbd9816d86fcb5ff27223521c8a46e534de8bb48348571f5d9d119"
+    },
+    {
+      "bytes": 1561,
+      "data_rows": 4,
+      "path": "srs/qwen_missing.csv",
+      "sha256": "b0ef8dc52b0da45db6fbfd4045c8502597e705047498eb9c76bb35b8d463d377"
+    },
+    {
+      "bytes": 1599,
+      "data_rows": 10,
+      "path": "srs/rules.csv",
+      "sha256": "ed6f03ffa62eeda11354c2e5f7db9c6fa2a7fa6c65ab55493f273dc9c3af9d36"
+    },
+    {
+      "bytes": 33417,
+      "data_rows": 152,
+      "path": "srs/sensitivity.csv",
+      "sha256": "13c1c07370db218efc0423fe21b8937fea7fbcad98fa957846bb8c6f056fbf66"
+    }
+  ],
+  "manifest_self_included": false,
+  "version": "1.0.0"
+}

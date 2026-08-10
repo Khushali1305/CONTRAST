@@ -1,0 +1,17 @@
+check,expected,actual,status
+Contract status frozen,frozen,frozen,PASS
+Canonical source hashes,3 PASS,3 PASS,PASS
+Canonical item rows,891,891,PASS
+Canonical input rows,3959,3959,PASS
+Canonical output rows,31672,31672,PASS
+Expected paired rows,24544,24544,PASS
+Technically available pairs,24541,24541,PASS
+Directional eligible source probes,762,762,PASS
+Invariance eligible source probes,1286,1286,PASS
+Addition eligible source probes,891,891,PASS
+Directional same-class exclusions,86,86,PASS
+Directional scope exclusions,23,23,PASS
+Directional focal-not-first exclusions,20,20,PASS
+Duplicate canonical pair IDs,0,0,PASS
+Eligibility invariant across models,1,1,PASS
+Missing cache pairs excluded from scored denominator,0,0,PASS

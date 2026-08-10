@@ -1,0 +1,8 @@
+model_id,model_display_name,archived_endpoint_span_type_f0_5_proxy,endpoint_proxy_rank,overcorrection_resistance,overcorrection_rank,archived_invariance_rate,archived_directional_rate
+flan_t5_large,FLAN-T5-Large,0.1874,3,0.6666666667,3,0.6842105263,0.0136054422
+flan_t5_xl,FLAN-T5-XL,0.171,7,0.9609053498,1,0.850877193,0.0340136054
+llama_8b,Llama-3.1-8B,0.1856,4,0.6152263374,6,0.6666666667,0.1904761905
+llama_70b,Llama-3.1-70B,0.2655,1,0.5102880658,7,0.798245614,0.2448979592
+qwen_32b,Qwen2.5-32B,0.1807,5,0.6769547325,2,0.8157894737,0.1700680272
+gemma_27b,Gemma-3-27B,0.1779,6,0.6172839506,5,0.7807017544,0.1972789116
+gpt4,GPT-4.1,0.2004,2,0.6440329218,4,0.8070175439,0.1904761905

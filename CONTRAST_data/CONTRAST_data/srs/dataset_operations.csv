@@ -1,0 +1,193 @@
+analysis_family,model_id,model_display_name,prompt_group,source_dataset,operation,metric,pair_n,canonical_items,score
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,rule_clause_expand,complete_exact_primary,2,2,1.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,rule_condition_syn,complete_exact_primary,14,14,1.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.5753424657534246
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.0375
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,1.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,1.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.4714285714285714
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.04081632653061224
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_clause_expand,complete_exact_primary,46,46,0.8913043478260869
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_condition_syn,complete_exact_primary,32,32,0.9375
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.25946969696969696
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.052083333333333336
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,rule_clause_expand,complete_exact_primary,2,2,1.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,rule_condition_syn,complete_exact_primary,14,14,1.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.5844748858447488
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.2625
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,1.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,1.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.4714285714285714
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.5918367346938775
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_clause_expand,complete_exact_primary,46,46,0.9782608695652174
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_condition_syn,complete_exact_primary,32,32,0.96875
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.26704545454545453
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.17708333333333334
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,rule_clause_expand,complete_exact_primary,2,2,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,rule_condition_syn,complete_exact_primary,14,14,0.6428571428571429
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.6986301369863014
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.775
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.7307692307692307
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.75
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.5428571428571428
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.8163265306122449
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_clause_expand,complete_exact_primary,46,46,0.1956521739130435
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_condition_syn,complete_exact_primary,32,32,0.25
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.14583333333333334
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.4375
+invariance,gpt4,GPT-4.1,full_system_plus_user,Grosser,rule_clause_expand,complete_exact_primary,2,2,0.5
+invariance,gpt4,GPT-4.1,full_system_plus_user,Grosser,rule_condition_syn,complete_exact_primary,14,14,1.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.8812785388127854
+invariance,gpt4,GPT-4.1,full_system_plus_user,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.91875
+invariance,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.9615384615384616
+invariance,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.75
+invariance,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.6857142857142857
+invariance,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.9183673469387755
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.1
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_clause_expand,complete_exact_primary,46,46,0.391304347826087
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_condition_syn,complete_exact_primary,32,32,0.5
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.2878787878787879
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,gpt4,GPT-4.1,full_system_plus_user,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.6458333333333334
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,rule_clause_expand,complete_exact_primary,2,2,0.5
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,rule_condition_syn,complete_exact_primary,14,14,0.7142857142857143
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.7351598173515982
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.80625
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.7692307692307693
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.75
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.6142857142857143
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.7142857142857143
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.1
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_clause_expand,complete_exact_primary,46,46,0.3695652173913043
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_condition_syn,complete_exact_primary,32,32,0.3125
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.19128787878787878
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.4791666666666667
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,rule_clause_expand,complete_exact_primary,2,2,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,rule_condition_syn,complete_exact_primary,14,14,0.5714285714285714
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.6118721461187214
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.7125
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.5769230769230769
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.75
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.5428571428571428
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.8367346938775511
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_active_restructure,complete_exact_primary,12,12,0.08333333333333333
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_clause_expand,complete_exact_primary,46,46,0.17391304347826086
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_condition_syn,complete_exact_primary,32,32,0.1875
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.11553030303030302
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.3541666666666667
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,rule_clause_expand,complete_exact_primary,2,2,0.5
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,rule_condition_syn,complete_exact_primary,14,14,0.9285714285714286
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.7077625570776256
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.85625
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.7307692307692307
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.75
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.6285714285714286
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.8163265306122449
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.1
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_clause_expand,complete_exact_primary,46,46,0.3695652173913043
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_condition_syn,complete_exact_primary,32,32,0.4375
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_modal_synonym,complete_exact_primary,527,527,0.21062618595825428
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.625
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,rule_clause_expand,complete_exact_primary,2,2,1.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,rule_condition_syn,complete_exact_primary,14,14,0.6428571428571429
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,rule_modal_synonym,complete_exact_primary,219,219,0.726027397260274
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,rule_subject_rephrase,complete_exact_primary,160,160,0.725
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,rule_canonical_permission,complete_exact_primary,1,1,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,rule_clause_expand,complete_exact_primary,26,26,0.9615384615384616
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,rule_condition_syn,complete_exact_primary,4,4,0.5
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,rule_modal_synonym,complete_exact_primary,70,70,0.7
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,rule_subject_rephrase,complete_exact_primary,49,49,0.9387755102040817
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_active_restructure,complete_exact_primary,12,12,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_adjectival_passive,complete_exact_primary,7,7,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_canonical_ability,complete_exact_primary,4,4,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_canonical_permission,complete_exact_primary,10,10,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_clause_expand,complete_exact_primary,46,46,0.5217391304347826
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_condition_syn,complete_exact_primary,32,32,0.40625
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_modal_synonym,complete_exact_primary,528,528,0.23106060606060605
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_nominalization,complete_exact_primary,6,6,0.0
+invariance,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,rule_subject_rephrase,complete_exact_primary,96,96,0.875
+directional,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,modal_substitution,complete_exact_primary,213,213,0.9906103286384976
+directional,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.9746835443037974
+directional,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,modal_substitution,complete_exact_primary,470,470,0.9276595744680851
+directional,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,modal_substitution,complete_exact_primary,213,213,1.0
+directional,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.9746835443037974
+directional,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,modal_substitution,complete_exact_primary,470,470,0.9361702127659575
+directional,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,modal_substitution,complete_exact_primary,213,213,0.0
+directional,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.0
+directional,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,modal_substitution,complete_exact_primary,470,470,0.002127659574468085
+directional,gpt4,GPT-4.1,full_system_plus_user,Grosser,modal_substitution,complete_exact_primary,213,213,0.9248826291079812
+directional,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.7721518987341772
+directional,gpt4,GPT-4.1,full_system_plus_user,PURE,modal_substitution,complete_exact_primary,470,470,0.3829787234042553
+directional,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,modal_substitution,complete_exact_primary,213,213,0.5258215962441315
+directional,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.5569620253164557
+directional,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,modal_substitution,complete_exact_primary,470,470,0.23617021276595745
+directional,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,modal_substitution,complete_exact_primary,213,213,0.03755868544600939
+directional,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.02531645569620253
+directional,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,modal_substitution,complete_exact_primary,470,470,0.00425531914893617
+directional,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,modal_substitution,complete_exact_primary,213,213,0.8075117370892019
+directional,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.620253164556962
+directional,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,modal_substitution,complete_exact_primary,469,469,0.31769722814498935
+directional,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,modal_substitution,complete_exact_primary,213,213,0.9061032863849765
+directional,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,modal_substitution,complete_exact_primary,79,79,0.810126582278481
+directional,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,modal_substitution,complete_exact_primary,470,470,0.42340425531914894
+addition,flan_t5_large,FLAN-T5-Large,short_user_only,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.9908675799086758
+addition,flan_t5_large,FLAN-T5-Large,short_user_only,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.9529411764705882
+addition,flan_t5_large,FLAN-T5-Large,short_user_only,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.9267461669505963
+addition,flan_t5_xl,FLAN-T5-XL,short_user_only,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.8767123287671232
+addition,flan_t5_xl,FLAN-T5-XL,short_user_only,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.9058823529411765
+addition,flan_t5_xl,FLAN-T5-XL,short_user_only,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.9063032367972743
+addition,gemma_27b,Gemma-3-27B,full_system_plus_user,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.1095890410958904
+addition,gemma_27b,Gemma-3-27B,full_system_plus_user,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.058823529411764705
+addition,gemma_27b,Gemma-3-27B,full_system_plus_user,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.19591141396933562
+addition,gpt4,GPT-4.1,full_system_plus_user,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.7397260273972602
+addition,gpt4,GPT-4.1,full_system_plus_user,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.6470588235294118
+addition,gpt4,GPT-4.1,full_system_plus_user,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.5604770017035775
+addition,llama_70b,Llama-3.1-70B,full_system_plus_user,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.228310502283105
+addition,llama_70b,Llama-3.1-70B,full_system_plus_user,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.21176470588235294
+addition,llama_70b,Llama-3.1-70B,full_system_plus_user,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.2674616695059625
+addition,llama_8b,Llama-3.1-8B,full_system_plus_user,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.1004566210045662
+addition,llama_8b,Llama-3.1-8B,full_system_plus_user,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.09411764705882353
+addition,llama_8b,Llama-3.1-8B,full_system_plus_user,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.08006814310051108
+addition,qwen_32b,Qwen2.5-32B,full_system_plus_user,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.2602739726027397
+addition,qwen_32b,Qwen2.5-32B,full_system_plus_user,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.2235294117647059
+addition,qwen_32b,Qwen2.5-32B,full_system_plus_user,PURE,distractor_insertion,addition_uptake_with_collateral,586,586,0.32764505119453924
+addition,rule_baseline,Rule Baseline,deterministic_rule_baseline,Grosser,distractor_insertion,addition_uptake_with_collateral,219,219,0.9406392694063926
+addition,rule_baseline,Rule Baseline,deterministic_rule_baseline,PROMISE_exp,distractor_insertion,addition_uptake_with_collateral,85,85,0.9882352941176471
+addition,rule_baseline,Rule Baseline,deterministic_rule_baseline,PURE,distractor_insertion,addition_uptake_with_collateral,587,587,0.7802385008517888

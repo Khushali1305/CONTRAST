@@ -1,0 +1,11 @@
+metric,family,definition,role
+focal_relation_pass,Invariance,Both output first-modal classes are present and equal.,Diagnostic
+focal_exact_pass,Invariance,Both output first-modal classes equal the base source first-modal class.,Primary focal
+focal_relation_pass,Directional,The output first-modal classes move strictly in the declared direction; equality fails.,Diagnostic
+focal_exact_pass,Directional,The base and probe output first-modal classes match the original and new source classes.,Primary focal
+collateral_primary_pass,Invariance/Directional,"Non-focal content F1>=0.80, shared-anchor recall>=0.50, exact number consistency, exact negation consistency.",Primary automatic proxy
+complete_exact_primary,Invariance/Directional,Primary focal exact pass AND primary collateral proxy.,Primary complete response
+addition_uptake_70,Addition,Probe-output distractor coverage>=0.70 and greater than base-output coverage.,Descriptive
+addition_uptake_with_collateral,Addition,Addition uptake_70 AND collateral proxy after removing addition tokens.,Descriptive cross-setting candidate
+both_endpoint_pass_100,All,Both rewrites score exactly 1.0 under EARS-Struct-v1.,Ordinary structural comparator
+hidden_exact_complete_failure,Invariance/Directional,"Among pairs passing both endpoints, 1-complete_exact_primary.",Primary endpoint blind spot

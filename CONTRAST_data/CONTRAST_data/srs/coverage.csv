@@ -1,0 +1,9 @@
+model_id,model_display_name,expected_outputs,present_outputs,missing_outputs,output_coverage_rate,expected_probe_decisions,present_probe_decisions,missing_probe_decisions,probe_decision_coverage_rate,prompt_group
+rule_baseline,Rule Baseline,3959,3959,0,1.0,3068,3068,0,1.0,deterministic_rule_baseline
+flan_t5_large,FLAN-T5-Large,3959,3959,0,1.0,3068,3068,0,1.0,short_user_only
+flan_t5_xl,FLAN-T5-XL,3959,3959,0,1.0,3068,3068,0,1.0,short_user_only
+llama_8b,Llama-3.1-8B,3959,3959,0,1.0,3068,3068,0,1.0,full_system_plus_user
+llama_70b,Llama-3.1-70B,3959,3959,0,1.0,3068,3068,0,1.0,full_system_plus_user
+qwen_32b,Qwen2.5-32B,3959,3955,4,0.998989643849457,3068,3065,3,0.9990221642764016,full_system_plus_user
+gemma_27b,Gemma-3-27B,3959,3959,0,1.0,3068,3068,0,1.0,full_system_plus_user
+gpt4,GPT-4.1,3959,3959,0,1.0,3068,3068,0,1.0,full_system_plus_user
