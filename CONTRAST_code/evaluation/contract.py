@@ -1,7 +1,27 @@
-"""Frozen constants for CONTRAST-SRS-CR-v1.0.0."""
+"""Frozen constants for CONTRAST-SRS-CR-v1.0.0 and its v1.1.0 eligibility amendment."""
 
 CONTRACT_ID = "CONTRAST-SRS-CR-v1.0.0"
 FROZEN_DATE = "2026-07-31"
+
+# Version 1.1.0 (the version reported in the paper) changes source eligibility only.
+# It excludes the 166 meaning-preserving pairs that directly substitute "will" -> "shall".
+# The frozen modal scale assigns "will" (moderate, class 2) and "shall" (strong, class 3)
+# to different classes, so these pairs conflict with the scale. The rule reads only
+# source-side fields and operation metadata; scoring, thresholds, and aggregation are unchanged.
+CONTRACT_ID_V11 = "CONTRAST-SRS-CR-v1.1.0"
+DEFAULT_CONTRACT_VERSION = "1.1"
+CONTRACT_VERSIONS = ("1.0", "1.1")
+
+
+def is_v11_excluded(row: dict[str, str]) -> bool:
+    """Return True for a direct will->shall meaning-preserving pair excluded in v1.1.0."""
+    return (
+        row.get("analysis_family") == "invariance"
+        and row.get("operation") == "rule_modal_synonym"
+        and row.get("source_base_first_modal_class") == "2"
+        and row.get("source_probe_first_modal_class") == "3"
+    )
+
 BOOTSTRAP_REPLICATES = 10_000
 BOOTSTRAP_SEED = 20_260_731
 
@@ -32,6 +52,13 @@ EXPECTED_ELIGIBLE_PAIRS = {
     "directional": 762,
     "addition": 891,
 }
+
+EXPECTED_ELIGIBLE_PAIRS_V11 = {
+    "invariance": 1_120,
+    "directional": 762,
+    "addition": 891,
+}
+V11_EXCLUDED_PAIRS_PER_MODEL = 166
 
 MODAL_CLASSES = {
     "may": 1,

@@ -1,6 +1,6 @@
 # CONTRAST: When Acceptable Text Revisions are Unreliable
 
-Anonymous ARR software supplement, version 1.0.0 (2026-08-04).
+Software supplement for the CONTRAST paper by Khushali Mandalia, Sourish Dasgupta, and Saurabh Tiwari (Dhirubhai Ambani University). Version 1.1.0 (2026-11-25).
 
 This archive contains executable scoring, aggregation, validation, and tests. It intentionally contains no paper source, author metadata, raw corpora, model outputs, API credentials, failed logs, partial runs, legacy snapshots, or reviewer-process text. The separately submitted `CONTRAST_data.zip` contains only redistributable derived tables and metadata.
 
@@ -18,7 +18,17 @@ python3 -m pip install -r requirements.txt
 
 The command runs unit tests, verifies every data hash and row count, recomputes the SRS primary and hidden-failure tables with 10,000 dataset-stratified item bootstraps, and checks them against the frozen reference tables.
 
-The frozen analysis contract is `CONTRAST-SRS-CR-v1.0.0` (2026-07-31):
+By default it uses contract `CONTRAST-SRS-CR-v1.1.0`, the version reported in the paper, and checks against `srs/primary_results_v1_1.csv` and `srs/hidden_failures_v1_1.csv`. To reproduce the original v1.0.0 tables instead, run:
+
+```bash
+CONTRAST_CONTRACT_VERSION=1.0 ./evaluation/run_all.sh ../CONTRAST_data
+```
+
+## Contract v1.1.0 (reported in the paper)
+
+Version 1.1.0 changes source eligibility only. It excludes the 166 meaning-preserving pairs that directly substitute *will* with *shall* (`operation = rule_modal_synonym`, base first-modal class 2, probe first-modal class 3), because the frozen modal scale assigns *will* and *shall* to different classes. The rule reads only source-side fields and operation metadata. Scoring, thresholds, aggregation, seeds, and missing-data treatment are unchanged. This leaves 1,120 meaning-preserving, 762 meaning-changing, and 891 addition pairs per system. See `srs/contract_v1_1.json`.
+
+The original frozen analysis contract is `CONTRAST-SRS-CR-v1.0.0` (2026-07-31):
 
 - 1,286 source-eligible invariance probes.
 - 762 source-eligible cross-class, first-locus directional probes.

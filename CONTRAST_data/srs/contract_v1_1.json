@@ -1,0 +1,28 @@
+{
+  "contract_id": "CONTRAST-SRS-CR-v1.1.0",
+  "amends": "CONTRAST-SRS-CR-v1.0.0",
+  "status": "frozen",
+  "released": "2026-11-25",
+  "change": "Source eligibility only. Excludes meaning-preserving pairs that directly substitute 'will' with 'shall', because the frozen modal scale assigns 'will' (moderate, class 2) and 'shall' (strong, class 3) to different classes.",
+  "exclusion_rule": "analysis_family == 'invariance' AND operation == 'rule_modal_synonym' AND source_base_first_modal_class == 2 AND source_probe_first_modal_class == 3",
+  "rule_inputs": "Source-side fields and operation metadata only; no model output, score, or human label.",
+  "excluded_pairs_per_system": 166,
+  "eligible_pairs_per_system": {
+    "invariance": 1120,
+    "directional": 762,
+    "addition": 891
+  },
+  "unchanged": [
+    "first-modal extraction",
+    "focal rules",
+    "collateral thresholds",
+    "endpoint scoring",
+    "missing-output treatment",
+    "item-macro aggregation",
+    "bootstrap settings (10,000 replicates, seed 20260731)"
+  ],
+  "reference_tables": [
+    "srs/primary_results_v1_1.csv",
+    "srs/hidden_failures_v1_1.csv"
+  ]
+}

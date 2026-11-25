@@ -8,7 +8,17 @@ import hashlib
 import json
 from pathlib import Path
 
-from .contract import CONTRACT_ID, EXPECTED_ELIGIBLE_PAIRS, MODEL_ORDER
+from .contract import (
+    CONTRACT_ID,
+    CONTRACT_ID_V11,
+    CONTRACT_VERSIONS,
+    DEFAULT_CONTRACT_VERSION,
+    EXPECTED_ELIGIBLE_PAIRS,
+    EXPECTED_ELIGIBLE_PAIRS_V11,
+    MODEL_ORDER,
+    V11_EXCLUDED_PAIRS_PER_MODEL,
+    is_v11_excluded,
+)
 
 
 def sha256(path: Path) -> str:
@@ -64,6 +74,28 @@ def verify_pair_scores(data_dir: Path) -> None:
             assert available == expected_available, (model_id, family, available, expected_available)
 
 
+def verify_v11_contract(data_dir: Path) -> None:
+    contract = json.loads((data_dir / "srs/contract_v1_1.json").read_text(encoding="utf-8"))
+    assert contract["contract_id"] == CONTRACT_ID_V11
+    assert contract["amends"] == CONTRACT_ID
+    rows = csv_rows(data_dir / "srs/pair_scores.csv")
+    for model_id in MODEL_ORDER:
+        model_rows = [row for row in rows if row["model_id"] == model_id]
+        excluded = [
+            row for row in model_rows
+            if row["source_eligible"] == "1" and is_v11_excluded(row)
+        ]
+        assert len(excluded) == V11_EXCLUDED_PAIRS_PER_MODEL, (model_id, len(excluded))
+        for family, expected in EXPECTED_ELIGIBLE_PAIRS_V11.items():
+            kept = [
+                row for row in model_rows
+                if row["analysis_family"] == family
+                and row["source_eligible"] == "1"
+                and not is_v11_excluded(row)
+            ]
+            assert len(kept) == expected, (model_id, family, len(kept), expected)
+
+
 def compare_numeric_tables(actual: Path, expected: Path, tolerance: float = 1e-12) -> None:
     actual_rows = csv_rows(actual)
     expected_rows = csv_rows(expected)
@@ -86,18 +118,23 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", type=Path, required=True)
     parser.add_argument("--recomputed-dir", type=Path)
+    parser.add_argument(
+        "--contract-version", choices=CONTRACT_VERSIONS, default=DEFAULT_CONTRACT_VERSION
+    )
     args = parser.parse_args()
     verify_manifest(args.data_dir)
     verify_contract(args.data_dir)
     verify_pair_scores(args.data_dir)
+    verify_v11_contract(args.data_dir)
     if args.recomputed_dir:
+        suffix = "_v1_1" if args.contract_version == "1.1" else ""
         compare_numeric_tables(
             args.recomputed_dir / "primary_results.csv",
-            args.data_dir / "srs/primary_results.csv",
+            args.data_dir / f"srs/primary_results{suffix}.csv",
         )
         compare_numeric_tables(
             args.recomputed_dir / "hidden_failures.csv",
-            args.data_dir / "srs/hidden_failures.csv",
+            args.data_dir / f"srs/hidden_failures{suffix}.csv",
         )
     print("All integrity, count, missingness, and table checks passed.")
 

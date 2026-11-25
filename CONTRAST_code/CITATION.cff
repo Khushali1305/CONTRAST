@@ -1,11 +1,18 @@
 cff-version: 1.2.0
-message: "Citation metadata will be deanonymized after review."
+message: "If you use this software, please cite the CONTRAST paper."
 title: "CONTRAST: When Acceptable Text Revisions are Unreliable — evaluation software"
 type: software
 authors:
-  - family-names: "Anonymous"
-    given-names: "Authors"
-version: 1.0.0
-date-released: 2026-08-04
+  - family-names: "Mandalia"
+    given-names: "Khushali"
+    affiliation: "Dhirubhai Ambani University"
+  - family-names: "Dasgupta"
+    given-names: "Sourish"
+    affiliation: "Dhirubhai Ambani University"
+  - family-names: "Tiwari"
+    given-names: "Saurabh"
+    affiliation: "Dhirubhai Ambani University"
+version: 1.1.0
+date-released: 2026-11-25
 license: MIT
-
+repository-code: "https://github.com/Khushali1305/CONTRAST"

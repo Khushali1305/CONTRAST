@@ -1,2 +1,2 @@
-"""Reproducible evaluation utilities for the anonymized CONTRAST supplement."""
+"""Reproducible evaluation utilities for the CONTRAST supplement."""
 

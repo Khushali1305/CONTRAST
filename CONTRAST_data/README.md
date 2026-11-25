@@ -1,6 +1,6 @@
 # CONTRAST derived-data supplement
 
-Anonymous ARR data supplement, version 1.0.0 (2026-08-04).
+Data supplement for the CONTRAST paper by Khushali Mandalia, Sourish Dasgupta, and Saurabh Tiwari (Dhirubhai Ambani University). Version 1.1.0 (2026-11-25).
 
 This archive contains redistributable derived scores, aggregate tables, missingness records, and provenance documentation. It contains no upstream requirement, learner, or simplification text; no model rewrite; no persistent learner identifier; no name, email, location, author metadata, credential, raw judge response, or partial run.
 
@@ -9,9 +9,11 @@ This archive contains redistributable derived scores, aggregate tables, missingn
 | File | Role |
 |---|---|
 | `srs/contract.json` | Machine-readable frozen contract `CONTRAST-SRS-CR-v1.0.0`. |
+| `srs/contract_v1_1.json` | Eligibility amendment `CONTRAST-SRS-CR-v1.1.0` used in the paper (excludes 166 direct *will*→*shall* pairs). |
+| `srs/primary_results_v1_1.csv`, `srs/hidden_failures_v1_1.csv` | Contract v1.1.0 tables reported in the paper. |
 | `srs/pair_scores.csv` | 24,544 expected canonical probe-model pairs; 24,541 are technically available. |
-| `srs/primary_results.csv` | Frozen item-macro primary results and 95% bootstrap intervals. |
-| `srs/hidden_failures.csv` | Endpoint-conditioned focal and complete-response failures. |
+| `srs/primary_results.csv` | Contract v1.0.0 item-macro primary results and 95% bootstrap intervals. |
+| `srs/hidden_failures.csv` | Contract v1.0.0 endpoint-conditioned focal and complete-response failures. |
 | `srs/eligibility.csv` | Source-side inclusion and exclusion counts. |
 | `srs/rules.csv`, `srs/metrics.csv` | Human-readable frozen decisions and metric definitions. |
 | `srs/sensitivity.csv`, `srs/dataset_operations.csv` | Threshold, extractor, dataset, and operation breakdowns. |

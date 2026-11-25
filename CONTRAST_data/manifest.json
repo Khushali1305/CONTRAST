@@ -1,17 +1,17 @@
 {
   "archive": "CONTRAST_data",
-  "contract_id": "CONTRAST-SRS-CR-v1.0.0",
+  "contract_id": "CONTRAST-SRS-CR-v1.1.0",
   "created": "2026-08-04",
   "files": [
     {
-      "bytes": 426,
+      "bytes": 464,
       "path": "LICENSE",
-      "sha256": "346ec31c60d978bb6f2a3d3f75baf893c6ca5ea20d0076f1dd99c1302bc58c6d"
+      "sha256": "182036761b9d2a7510d3486eab6215972881b61b2a8e43b224be29b3082957c9"
     },
     {
-      "bytes": 2985,
+      "bytes": 3365,
       "path": "README.md",
-      "sha256": "b9adec66d5d90ff7a3347e4971f0c5f59d6e62b383f11998250c1f08fb2434aa"
+      "sha256": "36579a89d68f09c3c58f3b7d8527b0d6e38022a448b3060adf51727d67841f49"
     },
     {
       "bytes": 1766,
@@ -53,6 +53,11 @@
       "sha256": "773ff0913d5c81296ae3645ac94d6fdbdefa91c95cd7be73cc8281971ca79441"
     },
     {
+      "path": "srs/contract_v1_1.json",
+      "bytes": 1140,
+      "sha256": "4aa1ee6a2e446144191ed19b4e57cedeb22122bc13d9994f42abcbc59112c91f"
+    },
+    {
       "bytes": 848,
       "data_rows": 8,
       "path": "srs/coverage.csv",
@@ -77,6 +82,12 @@
       "sha256": "47d960e439fdd7c3fb9bdbf7f86310fc7228c1db2be4f8681051433f1250f918"
     },
     {
+      "path": "srs/hidden_failures_v1_1.csv",
+      "bytes": 2943,
+      "sha256": "ac83f7db89b73eb639a57526980e179927106593954b138ff18e78f63377466d",
+      "data_rows": 8
+    },
+    {
       "bytes": 1339,
       "data_rows": 10,
       "path": "srs/metrics.csv",
@@ -93,6 +104,12 @@
       "data_rows": 8,
       "path": "srs/primary_results.csv",
       "sha256": "8ffea44ffd47fa7881c7c7ef7840d39cc1a444405ee8e52ddfd58c0903837345"
+    },
+    {
+      "path": "srs/primary_results_v1_1.csv",
+      "bytes": 3778,
+      "sha256": "83c6ca9f1efe16c50343ea75a913768dc7d98f908449600fae5d40727e2e9033",
+      "data_rows": 8
     },
     {
       "bytes": 727,
@@ -120,5 +137,6 @@
     }
   ],
   "manifest_self_included": false,
-  "version": "1.0.0"
+  "version": "1.1.0",
+  "updated": "2026-11-25"
 }

@@ -6,10 +6,11 @@ package_root="$(cd "$script_dir/.." && pwd)"
 data_dir="${1:-$(cd "$package_root/.." && pwd)/CONTRAST_data}"
 output_dir="${2:-$package_root/recomputed}"
 python_bin="${PYTHON:-python3}"
+contract_version="${CONTRAST_CONTRACT_VERSION:-1.1}"
 
 cd "$package_root"
 "$python_bin" -m unittest discover -s evaluation/tests -v
 "$python_bin" -m evaluation.validate --data-dir "$data_dir"
-"$python_bin" -m evaluation.aggregate --data-dir "$data_dir" --output-dir "$output_dir"
-"$python_bin" -m evaluation.validate --data-dir "$data_dir" --recomputed-dir "$output_dir"
+"$python_bin" -m evaluation.aggregate --data-dir "$data_dir" --output-dir "$output_dir" --contract-version "$contract_version"
+"$python_bin" -m evaluation.validate --data-dir "$data_dir" --recomputed-dir "$output_dir" --contract-version "$contract_version"
 

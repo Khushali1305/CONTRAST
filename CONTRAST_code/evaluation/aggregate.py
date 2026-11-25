@@ -11,12 +11,32 @@ from typing import Iterable
 
 import numpy as np
 
-from .contract import BOOTSTRAP_REPLICATES, BOOTSTRAP_SEED, MODEL_METADATA, MODEL_ORDER
+from .contract import (
+    BOOTSTRAP_REPLICATES,
+    BOOTSTRAP_SEED,
+    CONTRACT_VERSIONS,
+    DEFAULT_CONTRACT_VERSION,
+    MODEL_METADATA,
+    MODEL_ORDER,
+    is_v11_excluded,
+)
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as handle:
         return list(csv.DictReader(handle))
+
+
+def apply_contract_version(rows: list[dict[str, str]], version: str) -> list[dict[str, str]]:
+    """Mark v1.1.0 exclusions as source-ineligible; v1.0 returns the rows unchanged."""
+    if version not in CONTRACT_VERSIONS:
+        raise ValueError(f"unknown contract version: {version}")
+    if version == "1.0":
+        return rows
+    return [
+        {**row, "source_eligible": "0"} if is_v11_excluded(row) else row
+        for row in rows
+    ]
 
 
 def numeric(row: dict[str, str], field: str) -> float | None:
@@ -244,8 +264,14 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=Path("recomputed"))
     parser.add_argument("--bootstrap-replicates", type=int, default=BOOTSTRAP_REPLICATES)
     parser.add_argument("--seed", type=int, default=BOOTSTRAP_SEED)
+    parser.add_argument(
+        "--contract-version", choices=CONTRACT_VERSIONS, default=DEFAULT_CONTRACT_VERSION,
+        help="1.1 (default) reproduces the paper; 1.0 reproduces the original frozen tables.",
+    )
     args = parser.parse_args()
-    rows = read_rows(args.data_dir / "srs/pair_scores.csv")
+    rows = apply_contract_version(
+        read_rows(args.data_dir / "srs/pair_scores.csv"), args.contract_version
+    )
     write_csv(
         args.output_dir / "primary_results.csv",
         compute_primary_results(rows, replicates=args.bootstrap_replicates, seed=args.seed),
@@ -254,7 +280,7 @@ def main() -> None:
         args.output_dir / "hidden_failures.csv",
         compute_hidden_failures(rows, replicates=args.bootstrap_replicates, seed=args.seed),
     )
-    print(f"Wrote frozen aggregates to {args.output_dir}")
+    print(f"Wrote contract v{args.contract_version} aggregates to {args.output_dir}")
 
 
 if __name__ == "__main__":
